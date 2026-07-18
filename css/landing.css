@@ -235,10 +235,10 @@ body {
 
 /* Subheadline */
 .hero-subheadline {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   max-width: 780px;
-  margin: 1.5rem auto 1.5rem auto;
+  margin: 0.4rem auto 1.2rem auto;
   line-height: 1.6;
 }
 
@@ -856,8 +856,9 @@ body {
     margin-bottom: 0.75rem;
   }
   .hero-subheadline {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
   }
   .section-header {
     margin-bottom: 2.5rem;
