@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fast.wistia.com">
   <link rel="preconnect" href="https://cdn.utmify.com.br">
   <link rel="preconnect" href="https://player-vz-ca7561cd-44a.tv.pandavideo.com.br">
+  <!-- Preload Critical Hero Image (LCP) -->
+  <link rel="preload" as="image" href="images/hero_new.jpg" fetchpriority="high">
 
   <!-- Critical CSS inlined — renders hero without waiting for any file -->
   <style>
@@ -30,7 +32,7 @@
     .hero-section h1 span{background:linear-gradient(135deg,#e84e1b 0%,#ff3b6f 100%) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important}
     .hero-subheadline{font-size:clamp(.85rem,2.5vw,.98rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.75rem !important;max-width:540px !important;line-height:1.5 !important}
     .hero-subheadline span{font-weight:700 !important;color:#e84e1b !important}
-    .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important}
+    .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important;aspect-ratio:4/3 !important;background:#f1f5f9 !important}
     @media(max-width:600px){.hero-image-container{margin:10px auto 15px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
     .cta-container{display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%}
     .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
@@ -120,7 +122,7 @@
 
     <!-- Hero Mockup Image -->
     <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0;">
-      <img src="images/hero_new.jpg" alt="CoachBrain Basketball Coaching Assistant App Mockup" style="width: 100%; height: auto; display: block;" fetchpriority="high">
+      <img src="images/hero_new.jpg" alt="CoachBrain Basketball Coaching Assistant App Mockup" width="1024" height="768" style="width: 100%; height: auto; display: block;" fetchpriority="high">
     </div>
     
     <div class="cta-container">
