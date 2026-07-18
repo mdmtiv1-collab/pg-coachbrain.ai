@@ -5,18 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoachBrain | Your 24/7 AI Basketball Coaching Assistant</title>
   <meta name="description" content="Plan structured practices, get instant tactical answers, and access a library of +150 HD video drills in minutes. Meet your 24/7 AI assistant coach.">
-  
-  <!-- Preconnect to Google Fonts and load stylesheet -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- OG tags for social sharing -->
+  <!-- OG tags -->
   <meta property="og:title" content="CoachBrain | Your 24/7 AI Basketball Coaching Assistant" />
   <meta property="og:description" content="Stop wasting hours planning from scratch. Meet your 24/7 AI assistant coach." />
   <meta property="og:type" content="website" />
-  
-  <link rel="stylesheet" href="css/landing.css">
+
+  <!-- Preconnects: resolve DNS early for all 3rd parties -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fast.wistia.com">
+  <link rel="preconnect" href="https://cdn.utmify.com.br">
+
+  <!-- Critical CSS inlined — renders hero without waiting for any file -->
+  <style>
+    :root{--font-sans:'Plus Jakarta Sans',sans-serif;--bg-dark:#fff;--primary:#e84e1b;--text-primary:#0f172a;--text-secondary:#475569;--border-color:rgba(232,78,27,0.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-sans),sans-serif;background:#fff;color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+    .promo-banner-top{background:var(--primary);color:#fff;text-align:center;padding:.5rem 1rem;font-size:.82rem;font-weight:700;letter-spacing:.3px}
+    .hero-section{max-width:700px;margin:0 auto;padding:.85rem 1.25rem 1.25rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;background:rgba(232,78,27,.08);border:1px solid rgba(232,78,27,.2);color:var(--primary);padding:.28rem .85rem;border-radius:50px;font-size:.76rem;font-weight:700;margin-bottom:.55rem;letter-spacing:.5px;text-transform:uppercase}
+    .hero-section h1{font-size:clamp(1.65rem,5vw,2.5rem);font-weight:900;line-height:1.1;letter-spacing:-1.2px;margin-bottom:.65rem;color:var(--text-primary);max-width:640px}
+    .hero-section h1 span{background:linear-gradient(135deg,#e84e1b 0%,#ff3b6f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-subheadline{font-size:clamp(.88rem,2.5vw,1rem);color:var(--text-secondary);margin-bottom:.75rem;max-width:540px;line-height:1.5}
+    .hero-subheadline span{font-weight:700;color:#e84e1b}
+    .hero-video-container{max-width:300px;width:70%;margin:12px auto 16px;border-radius:18px;overflow:hidden;border:1px solid rgba(0,0,0,.09);box-shadow:0 8px 24px rgba(0,0,0,.11)}
+    @media(max-width:600px){.hero-video-container{max-width:210px;width:60%;margin:8px auto 12px}.hero-section{padding:.65rem 1rem 1rem}}
+    wistia-player[media-id='nvorryh9ku']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/nvorryh9ku/swatch');display:block;filter:blur(5px);padding-top:177.78%}
+    .cta-container{display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%}
+    .btn-hero-cta{display:inline-block;background:#e84e1b;color:#fff;font-weight:800;font-size:.95rem;padding:.8rem 1.9rem;border-radius:50px;text-decoration:none;letter-spacing:.3px;box-shadow:0 4px 18px rgba(232,78,27,.35)}
+    .hero-security-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem .75rem;font-size:.73rem;color:var(--text-secondary);font-weight:600}
+  </style>
+
+  <!-- Google Fonts: non-render-blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap"></noscript>
+
+  <!-- Non-critical CSS: deferred so it doesn't block first paint -->
+  <link rel="preload" as="style" href="css/landing.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/landing.css"></noscript>
+
+  <!-- UTMify: track UTMs across funnel -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <!-- UTMify Pixel -->
+  <script>
+  window.pixelId = "6a4c43a59b3324aca82e49b5";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
 </head>
 <body>
 
@@ -34,36 +79,37 @@
       <span>Relax while CoachBrain works for you.</span> Plan complete practices, create custom drills, organize every session and get instant coaching help whenever you need it.
     </p>
     
-    <!-- Centered Video Container (Wistia Vertical Player) -->
-    <div class="hero-video-container">
-      <script src="https://fast.wistia.com/player.js" async></script>
-      <script src="https://fast.wistia.com/embed/nvorryh9ku.js" async type="module"></script>
-      <style>
-        .hero-video-container {
-          max-width: 320px;
-          width: 75%;
-          margin: 24px auto;
-          border-radius: 20px;
-          overflow: hidden;
-          border: 1px solid rgba(255,255,255,0.1);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        @media (max-width: 600px) {
-          .hero-video-container {
-            max-width: 240px;
-            width: 65%;
-            margin: 18px auto;
-          }
-        }
-        wistia-player[media-id='nvorryh9ku']:not(:defined) { 
-          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nvorryh9ku/swatch'); 
-          display: block; 
-          filter: blur(5px); 
-          padding-top: 177.78%; 
-        }
-      </style> 
+    <!-- Video Container (Wistia — loaded lazily when visible) -->
+    <div class="hero-video-container" id="wistia-wrapper">
       <wistia-player media-id="nvorryh9ku" aspect="0.5625"></wistia-player>
     </div>
+    <script>
+      (function(){
+        var loaded = false;
+        var el = document.getElementById('wistia-wrapper');
+        function loadWistia(){
+          if(loaded) return;
+          loaded = true;
+          var s1 = document.createElement('script');
+          s1.src = 'https://fast.wistia.com/player.js';
+          s1.async = true;
+          document.head.appendChild(s1);
+          var s2 = document.createElement('script');
+          s2.src = 'https://fast.wistia.com/embed/nvorryh9ku.js';
+          s2.async = true;
+          s2.type = 'module';
+          document.head.appendChild(s2);
+        }
+        if('IntersectionObserver' in window){
+          var obs = new IntersectionObserver(function(entries){
+            if(entries[0].isIntersecting){ loadWistia(); obs.disconnect(); }
+          },{rootMargin:'200px'});
+          obs.observe(el);
+        } else {
+          loadWistia();
+        }
+      })();
+    </script>
     
     <div class="cta-container">
       <a href="#pricing" class="btn-hero-cta">GET INSTANT ACCESS NOW</a>
