@@ -30,8 +30,8 @@
     .hero-section h1 span{background:linear-gradient(135deg,#e84e1b 0%,#ff3b6f 100%) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important}
     .hero-subheadline{font-size:clamp(.85rem,2.5vw,.98rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.75rem !important;max-width:540px !important;line-height:1.5 !important}
     .hero-subheadline span{font-weight:700 !important;color:#e84e1b !important}
-    .hero-video-container{max-width:300px !important;width:70% !important;margin:10px auto 14px !important;border-radius:18px !important;overflow:hidden !important;border:1px solid rgba(0,0,0,.09) !important;box-shadow:0 8px 24px rgba(0,0,0,.11) !important;aspect-ratio:9/16 !important;background:#000 !important;position:relative !important}
-    @media(max-width:600px){.hero-video-container{max-width:210px !important;width:60% !important;margin:6px auto 10px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
+    .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important}
+    @media(max-width:600px){.hero-image-container{margin:10px auto 15px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
     .cta-container{display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%}
     .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
     .btn-hero-cta{display:block !important;width:100% !important;max-width:280px !important;background:#22c55e !important;color:#fff !important;font-weight:800 !important;font-size:1rem !important;padding:0.9rem 1.5rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(34, 197, 94, 0.3) !important;transition:transform 0.2s, box-shadow 0.2s !important}
@@ -118,33 +118,10 @@
       <span>Relax while CoachBrain works for you.</span> Plan complete practices, create custom drills, organize every session and get instant coaching help whenever you need it.
     </p>
 
-    <!-- Video: PandaVideo -->
-    <div class="hero-video-container">
-      <iframe
-        id="panda-1e7e3e3d-04f4-4a82-80e6-aa864fe3722a"
-        data-src="https://player-vz-ca7561cd-44a.tv.pandavideo.com.br/embed/?v=1e7e3e3d-04f4-4a82-80e6-aa864fe3722a&autoplay=true&muted=true&mutedIndicatorIcon=true&mutedIndicatorTextTop=Seu%20video%20ja%20comecou&mutedIndicatorTextBottom=Clique%20para%20ativar%20o%20som&mutedIndicatorClickRestart=true&saveProgress=false"
-        style="border: none; width: 100%; height: 100%; display: block;"
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen="true"
-        width="720"
-        height="360">
-      </iframe>
+    <!-- Hero Mockup Image -->
+    <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0;">
+      <img src="images/hero_new.jpg" alt="CoachBrain Basketball Coaching Assistant App Mockup" style="width: 100%; height: auto; display: block;" fetchpriority="high">
     </div>
-    <script>
-      (function() {
-        function loadPanda() {
-          var iframe = document.getElementById('panda-1e7e3e3d-04f4-4a82-80e6-aa864fe3722a');
-          if (iframe && iframe.getAttribute('data-src')) {
-            iframe.src = iframe.getAttribute('data-src');
-          }
-        }
-        if (document.readyState === 'loading') {
-          window.addEventListener('DOMContentLoaded', function() { setTimeout(loadPanda, 150); });
-        } else {
-          setTimeout(loadPanda, 150);
-        }
-      })();
-    </script>
     
     <div class="cta-container">
       <a href="#pricing" class="btn-hero-cta">GET INSTANT ACCESS NOW</a>
@@ -269,6 +246,31 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- App Peek Section (Look Inside the App / PandaVideo) -->
+  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span style="color: #e84e1b; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">LOOK INSIDE THE APP</span>
+      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">A Glance at What You'll Get</h2>
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
+        Real drills from the app with professional diagrams, detailed explanations and dynamic videos.
+      </p>
+    </div>
+    
+    <!-- Video Container (PandaVideo) -->
+    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
+      <iframe
+        id="panda-1e7e3e3d-04f4-4a82-80e6-aa864fe3722a"
+        src="https://player-vz-ca7561cd-44a.tv.pandavideo.com.br/embed/?v=1e7e3e3d-04f4-4a82-80e6-aa864fe3722a&autoplay=true&muted=true&mutedIndicatorIcon=true&mutedIndicatorTextTop=Seu%20video%20ja%20comecou&mutedIndicatorTextBottom=Clique%20para%20ativar%20o%20som&mutedIndicatorClickRestart=true&saveProgress=false"
+        style="border: none; width: 100%; height: 100%; display: block;"
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen="true"
+        width="720"
+        height="360"
+        loading="lazy">
+      </iframe>
     </div>
   </section>
 
