@@ -35,15 +35,31 @@
     </p>
     
     <!-- Centered Video Container (Wistia Vertical Player) -->
-    <div class="hero-video-container" style="max-width: 380px; width: 100%; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+    <div class="hero-video-container">
       <script src="https://fast.wistia.com/player.js" async></script>
       <script src="https://fast.wistia.com/embed/nvorryh9ku.js" async type="module"></script>
       <style>
+        .hero-video-container {
+          max-width: 320px;
+          width: 75%;
+          margin: 24px auto;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 600px) {
+          .hero-video-container {
+            max-width: 240px;
+            width: 65%;
+            margin: 18px auto;
+          }
+        }
         wistia-player[media-id='nvorryh9ku']:not(:defined) { 
           background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nvorryh9ku/swatch'); 
           display: block; 
           filter: blur(5px); 
-          padding-top:177.78%; 
+          padding-top: 177.78%; 
         }
       </style> 
       <wistia-player media-id="nvorryh9ku" aspect="0.5625"></wistia-player>
