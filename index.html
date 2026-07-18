@@ -79,37 +79,10 @@
       <span>Relax while CoachBrain works for you.</span> Plan complete practices, create custom drills, organize every session and get instant coaching help whenever you need it.
     </p>
     
-    <!-- Video Container (Wistia — loaded lazily when visible) -->
-    <div class="hero-video-container" id="wistia-wrapper">
-      <wistia-player media-id="nvorryh9ku" aspect="0.5625"></wistia-player>
+    <!-- Video Container (Wistia) -->
+    <div class="hero-video-container">
+      <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/nvorryh9ku.js" async type="module"></script><style>wistia-player[media-id='nvorryh9ku']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nvorryh9ku/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id="nvorryh9ku" aspect="0.5625"></wistia-player>
     </div>
-    <script>
-      (function(){
-        var loaded = false;
-        var el = document.getElementById('wistia-wrapper');
-        function loadWistia(){
-          if(loaded) return;
-          loaded = true;
-          var s1 = document.createElement('script');
-          s1.src = 'https://fast.wistia.com/player.js';
-          s1.async = true;
-          document.head.appendChild(s1);
-          var s2 = document.createElement('script');
-          s2.src = 'https://fast.wistia.com/embed/nvorryh9ku.js';
-          s2.async = true;
-          s2.type = 'module';
-          document.head.appendChild(s2);
-        }
-        if('IntersectionObserver' in window){
-          var obs = new IntersectionObserver(function(entries){
-            if(entries[0].isIntersecting){ loadWistia(); obs.disconnect(); }
-          },{rootMargin:'200px'});
-          obs.observe(el);
-        } else {
-          loadWistia();
-        }
-      })();
-    </script>
     
     <div class="cta-container">
       <a href="#pricing" class="btn-hero-cta">GET INSTANT ACCESS NOW</a>
