@@ -34,35 +34,19 @@
       <span>Relax while CoachBrain works for you.</span> Plan complete practices, create custom drills, organize every session and get instant coaching help whenever you need it.
     </p>
     
-    <!-- Centered Mockup Image Container (Light-themed Chat Mockup representing AI Assistant) -->
-    <div class="hero-image-container">
-      <div class="chat-mockup-wrapper">
-        <div class="chat-mockup-header">
-          <div class="chat-mockup-avatar">CB</div>
-          <div class="chat-mockup-status">
-            <h4>CoachBrain Assistant</h4>
-            <span>Online 24/7</span>
-          </div>
-        </div>
-        <div class="chat-mockup-messages">
-          <div class="chat-msg user">
-            I have 10 youth players (under 12) for 45 minutes on a half-court. Can you make a ball-handling and layup practice plan?
-          </div>
-          <div class="chat-msg ai">
-            Here is your 45-minute half-court youth practice plan:
-            <div class="chat-plan-box">
-              <div class="chat-plan-title">🏀 Plan: Youth Ball-Handling & Layups</div>
-              <ul class="chat-plan-steps">
-                <li><strong>00:00 - 00:10 | Warm-up: Dribble Tag</strong> (Players dribble in half-court trying to tag others. Fosters awareness).</li>
-                <li><strong>00:10 - 00:25 | Ball Control: Cone Crossover Relays</strong> (Staggered cones focusing on crossover technique).</li>
-                <li><strong>00:25 - 00:40 | Shooting: Rapid-Fire Layup Lines</strong> (Two lines. Passing & cutting into layout. High reps).</li>
-                <li><strong>00:40 - 00:45 | Cool-down: Free Throw Knockout</strong> (Fun shooting game to end).</li>
-              </ul>
-            </div>
-            <em>Would you like to swap any drill or see step-by-step instructions for one of them?</em>
-          </div>
-        </div>
-      </div>
+    <!-- Centered Video Container (Wistia Vertical Player) -->
+    <div class="hero-video-container" style="max-width: 380px; width: 100%; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+      <script src="https://fast.wistia.com/player.js" async></script>
+      <script src="https://fast.wistia.com/embed/nvorryh9ku.js" async type="module"></script>
+      <style>
+        wistia-player[media-id='nvorryh9ku']:not(:defined) { 
+          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nvorryh9ku/swatch'); 
+          display: block; 
+          filter: blur(5px); 
+          padding-top:177.78%; 
+        }
+      </style> 
+      <wistia-player media-id="nvorryh9ku" aspect="0.5625"></wistia-player>
     </div>
     
     <div class="cta-container">
