@@ -257,6 +257,23 @@
         var video = document.getElementById('app-preview-video');
         if (!video) return;
 
+        // Force play unmuted immediately when user clicks the hero CTA button
+        var heroBtn = document.querySelector('a[href="#app-glance"]');
+        if (heroBtn) {
+          heroBtn.addEventListener('click', function() {
+            video.muted = false;
+            video.currentTime = 0;
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function(e) {
+                // If browser blocks, try muted play fallback
+                video.muted = true;
+                video.play();
+              });
+            }
+          });
+        }
+
         var options = {
           root: null,
           rootMargin: '0px',
@@ -266,19 +283,20 @@
         var observer = new IntersectionObserver(function(entries, observer) {
           entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-              // User has scrolled the video into view: unmute and play from beginning
-              video.muted = false; 
-              video.currentTime = 0;
-              var playPromise = video.play();
-              if (playPromise !== undefined) {
-                playPromise.catch(function(error) {
-                  // Fallback: browser requires interaction for sound, try playing muted first
-                  video.muted = true;
-                  video.play();
-                });
+              // Only trigger scroll autoplay if the video is not already playing
+              if (video.paused) {
+                video.muted = false; 
+                video.currentTime = 0;
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                  playPromise.catch(function(error) {
+                    video.muted = true;
+                    video.play();
+                  });
+                }
               }
             } else {
-              // Pause when out of view to save resource and avoid background sound
+              // Pause when out of view
               video.pause();
             }
           });
