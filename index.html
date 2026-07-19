@@ -242,19 +242,51 @@
       </p>
     </div>
     
-    <!-- Video Container (PandaVideo) -->
+    <!-- Video Container (Native Video with Intersection Observer Autoplay/Audio control) -->
     <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
-      <iframe
-        id="panda-1e7e3e3d-04f4-4a82-80e6-aa864fe3722a"
-        src="https://player-vz-ca7561cd-44a.tv.pandavideo.com.br/embed/?v=1e7e3e3d-04f4-4a82-80e6-aa864fe3722a&autoplay=true&muted=true&mutedIndicatorIcon=true&mutedIndicatorTextTop=Seu%20video%20ja%20comecou&mutedIndicatorTextBottom=Clique%20para%20ativar%20o%20som&mutedIndicatorClickRestart=true&saveProgress=false"
-        style="border: none; width: 100%; height: 100%; display: block;"
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen="true"
-        width="720"
-        height="360"
-        loading="lazy">
-      </iframe>
+      <video
+        id="app-preview-video"
+        src="videos/video_pg_coachbrain.mp4"
+        style="width: 100%; height: 100%; display: block;"
+        controls
+        playsinline>
+      </video>
     </div>
+    <script>
+      (function() {
+        var video = document.getElementById('app-preview-video');
+        if (!video) return;
+
+        var options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5 // Play when 50% of the video is visible
+        };
+
+        var observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              // User has scrolled the video into view: unmute and play from beginning
+              video.muted = false; 
+              video.currentTime = 0;
+              var playPromise = video.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                  // Fallback: browser requires interaction for sound, try playing muted first
+                  video.muted = true;
+                  video.play();
+                });
+              }
+            } else {
+              // Pause when out of view to save resource and avoid background sound
+              video.pause();
+            }
+          });
+        }, options);
+
+        observer.observe(video);
+      })();
+    </script>
   </section>
 
   <!-- Testimonials Section -->
