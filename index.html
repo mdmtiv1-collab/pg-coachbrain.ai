@@ -77,8 +77,9 @@
     }
   </style>
 
-  <!-- Google Fonts: Loaded directly to prevent font-swap layout shift (CLS) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap">
+  <!-- Google Fonts: Loaded asynchronously to prevent render blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap"></noscript>
 
   <!-- Non-critical CSS: deferred so it doesn't block first paint -->
   <link rel="preload" as="style" href="css/landing.css" onload="this.onload=null;this.rel='stylesheet'">
