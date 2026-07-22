@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.utmify.com.br">
   <!-- Preload Critical Hero Image (LCP) -->
-  <link rel="preload" as="image" href="images/hero_new.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero_new.jpg?v=2" fetchpriority="high">
 
   <!-- Critical CSS inlined — renders hero without waiting for any file -->
   <style>
@@ -33,7 +33,7 @@
     .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important;aspect-ratio:4/3 !important;background:#f1f5f9 !important}
     @media(max-width:600px){.hero-image-container{margin:10px auto 15px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
     .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
-    .btn-hero-cta{display:block !important;width:100% !important;max-width:280px !important;background:#22c55e !important;color:#fff !important;font-weight:800 !important;font-size:1rem !important;padding:0.9rem 1.5rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(34, 197, 94, 0.3) !important;transition:transform 0.2s, box-shadow 0.2s !important}
+    .btn-hero-cta{display:block !important;width:100% !important;max-width:310px !important;background:#22c55e !important;color:#fff !important;font-weight:800 !important;font-size:clamp(0.75rem, 3.8vw, 0.95rem) !important;padding:0.85rem 1rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(34, 197, 94, 0.3) !important;transition:transform 0.2s, box-shadow 0.2s !important;white-space:nowrap !important}
     .hero-security-badges{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;gap:.4rem .75rem !important;font-size:.73rem !important;color:var(--text-secondary) !important;font-weight:600 !important;margin-top:8px !important;width:100% !important}
     .hero-security-badges span{font-size:0.78rem !important;font-weight:700 !important;color:var(--text-secondary) !important;display:inline-flex !important;align-items:center !important;gap:0.25rem !important;letter-spacing:0.2px !important}
     
@@ -77,9 +77,9 @@
     }
   </style>
 
-  <!-- Google Fonts: Loaded asynchronously to prevent render blocking -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap"></noscript>
+  <!-- Google Fonts: Loaded asynchronously to prevent render blocking with optional font-display -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=optional"></noscript>
 
   <!-- Non-critical CSS: deferred so it doesn't block first paint -->
   <link rel="preload" as="style" href="css/landing.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -121,7 +121,7 @@
 
     <!-- Hero Mockup Image -->
     <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0; aspect-ratio: 4/3; background: #f1f5f9;">
-      <img src="images/hero_new.jpg" alt="CoachBrain Basketball Coaching Assistant App Mockup" width="600" height="450" style="width: 100%; height: auto; display: block;" fetchpriority="high">
+      <img src="images/hero_new.jpg?v=2" alt="CoachBrain Basketball Coaching Assistant App Mockup" width="600" height="450" style="width: 100%; height: auto; display: block;" fetchpriority="high">
     </div>
     
     <div class="cta-container">
