@@ -384,9 +384,10 @@ function toggleComplete() {
 }
 
 function updateProgress() {
-  const total = 150;
+  if (!progressText && !progressBarFill) return;
+  const total = categories.reduce((acc, cat) => acc + cat.exercises.length, 0);
   const completed = completedExercises.length;
-  const percentage = Math.round((completed / total) * 100);
+  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   if (progressText) {
     progressText.innerHTML = `Progresso dos Treinos: <span>${completed} de ${total}</span> (${percentage}%)`;
