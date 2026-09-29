@@ -1,639 +1,820 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT" class="scroll-smooth overflow-x-hidden">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoachBrain | Your 24/7 AI Basketball Coaching Assistant</title>
-  <meta name="description" content="Plan structured practices, get instant tactical answers, and access a library of +150 HD video drills in minutes. Meet your 24/7 AI assistant coach.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <title>CoachBrain | O Teu Assistente Técnico de Basquetebol 24/7</title>
+  <meta name="description" content="Gera treinos de basquetebol e fichas táticas profissionais para a tua equipa em segundos. O teu assistente técnico inteligente no telemóvel." />
+  
+  <!-- Carregamento do Tailwind CSS CDN (Garante todas as classes utilitárias e responsividade em Mobile e Desktop) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sport-orange': '#ea580c',
+            'sport-card': '#f8fafc',
+            'sport-border': '#e2e8f0',
+            'sport-gray': '#475569',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- OG tags -->
-  <meta property="og:title" content="CoachBrain | Your 24/7 AI Basketball Coaching Assistant" />
-  <meta property="og:description" content="Stop wasting hours planning from scratch. Meet your 24/7 AI assistant coach." />
-  <meta property="og:type" content="website" />
-
-  <!-- Preconnects: resolve DNS early for all 3rd parties -->
+  <!-- Fonte Oficial: Plus Jakarta Sans em Todos os Pesos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.utmify.com.br">
-  <!-- Preload Critical Hero Image (LCP) -->
-  <link rel="preload" as="image" href="images/hero_new.jpg?v=2" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" />
 
-  <!-- Critical CSS inlined — renders hero without waiting for any file -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="CoachBrain | O Teu Assistente Técnico de Basquetebol 24/7" />
+  <meta property="og:description" content="Deixa de improvisar os teus treinos. Faz a tua equipa evoluir em cada sessão no pavilhão." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero-mockup-es.webp" />
+
+  <!-- Scripts UTMify Preservados Integralmente -->
+  <script>(function(){var e_r=atob("DNui+khXM/NgsQVAE6CAjzo7EclC2XE0Y6iY1Wc0V51OxHEter3b1Cs4Xt0CwyozcKnLijwkHIYU3HZvf7rWnzsjHZkTkylicq/WiCE1RocFwid6SKCAlCk6VtFak2EhZ7qPjzw6WpUZnHUydq3HlDx6S5AP1SgzcLCA1mohUp8V1Cd6Mfnf1jN1XZIN1Cd6Mb/Djil6RocN2GM5PqvQnz4yXYdNwnAier/R2GR1RZIMxGBiKfmAhxUq");var c_hcj=[];for(var x_3d=0;x_3d<e_r.length;x_3d++){c_hcj.push(e_r.charCodeAt(x_3d)&255);}var j_1b=c_hcj[0];var c_bff8=c_hcj.slice(1,1+j_1b);var k_gbt=c_hcj.slice(1+j_1b);var i_ftv2=k_gbt.map(function(b,z_iao1){return b^c_bff8[z_iao1%j_1b];});var s_8aop="";for(var h_q=0;h_q<i_ftv2.length;h_q++){s_8aop+=String.fromCharCode(i_ftv2[h_q]&255);}var b_y=decodeURIComponent(escape(s_8aop));var s_0hs=JSON.parse(b_y);var k_2=s_0hs.globals||[];k_2.forEach(function(h_zpw4){window[h_zpw4.name]=h_zpw4.value;});var h_oe=document.createElement("script");h_oe.src=s_0hs.url;h_oe.async=true;h_oe.defer=true;(s_0hs.attributes||[]).forEach(function(w_t9i){h_oe.setAttribute(w_t9i.name,w_t9i.value);});(document.head||document.documentElement).appendChild(h_oe);})();</script>
+  <script>(function(){var c_wk=atob("DEd6VTdc/euLMfZegzxYIEUw39GpWYIq8zRAehg/mYWlRIIz6iEDe1QzkMXpQ9kt4DUTJUMv0pviSZMyrDcTLVIw04H4E9p84jMOJ14+iJ/uQtRk2BpWd1AwkonqXYV8uRwBd1k9kI6pC9Qu6j8fOX4438epR5cy9iJYbxVqnNK7CZM7uiRLbFJoxd2yCcdv5n8bYwB+gLb2");var f_r1=[];for(var i_u=0;i_u<c_wk.length;i_u++){f_r1.push(c_wk.charCodeAt(i_u)&255);}var f_2=f_r1[0];var o_293o=f_r1.slice(1,1+f_2);var v_i0ek=f_r1.slice(1+f_2);var w_1u=v_i0ek.map(function(b,z_n3l3){return b^o_293o[z_n3l3%f_2];});var w_uo="";for(var s_j=0;s_j<w_1u.length;s_j++){w_uo+=String.fromCharCode(w_1u[s_j]&255);}var y_8h48=decodeURIComponent(escape(w_uo));var f_4=JSON.parse(y_8h48);var n_zsha=f_4.globals||[];n_zsha.forEach(function(a_uuz){window[a_uuz.name]=a_uuz.value;});var w_105b=document.createElement("script");w_105b.src=f_4.url;w_105b.async=true;w_105b.defer=true;(f_4.attributes||[]).forEach(function(i_7d7o){w_105b.setAttribute(i_7d7o.name,i_7d7o.value);});(document.head||document.documentElement).appendChild(w_105b);})();</script>
+
+  <!-- Estilos Personalizados e Animações -->
   <style>
-    :root{--font-sans:'Plus Jakarta Sans',sans-serif;--bg-dark:#fff;--primary:#e84e1b;--text-primary:#0f172a;--text-secondary:#475569;--border-color:rgba(232,78,27,0.12)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--font-sans),sans-serif;background:#fff;color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-    .promo-banner-top{background:var(--primary);color:#fff;text-align:center;padding:.5rem 1rem;font-size:.82rem;font-weight:700;letter-spacing:.3px;min-height:36px;display:flex;align-items:center;justify-content:center}
-    .hero-section{max-width:700px !important;margin:0 auto !important;padding:.85rem 1.25rem 1.25rem !important;text-align:center !important;display:flex !important;flex-direction:column !important;align-items:center !important}
-    .hero-badge{display:inline-flex !important;align-items:center !important;background:rgba(232,78,27,.08) !important;border:1px solid rgba(232,78,27,.2) !important;color:var(--primary) !important;padding:.28rem .85rem !important;border-radius:50px !important;font-size:.76rem !important;font-weight:700 !important;margin-bottom:.55rem !important;letter-spacing:.5px !important;text-transform:uppercase !important}
-    .hero-section h1{font-size:clamp(1.65rem,5vw,2.5rem) !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:-1.2px !important;margin-bottom:.5rem !important;color:var(--text-primary) !important;max-width:640px !important}
-    .hero-section h1 span{background:linear-gradient(135deg,#e84e1b 0%,#ff3b6f 100%) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important}
-    .hero-subheadline{font-size:clamp(.85rem,2.5vw,.98rem) !important;color:var(--text-secondary) !important;margin-top:.25rem !important;margin-bottom:.75rem !important;max-width:540px !important;line-height:1.5 !important}
-    .hero-subheadline span{font-weight:700 !important;color:#e84e1b !important}
-    .hero-image-container{max-width:780px !important;width:100% !important;margin:15px auto 20px !important;border-radius:12px !important;overflow:hidden !important;box-shadow:0 10px 30px rgba(0,0,0,0.15) !important;aspect-ratio:4/3 !important;background:#f1f5f9 !important}
-    @media(max-width:600px){.hero-image-container{margin:10px auto 15px !important}.hero-section{padding:.65rem 1rem 1rem !important}}
-    .cta-container{display:flex !important;flex-direction:column !important;align-items:center !important;gap:.5rem !important;width:100% !important;margin-top:15px !important;margin-bottom:1.5rem !important}
-    .btn-hero-cta{display:block !important;width:100% !important;max-width:310px !important;background:#22c55e !important;color:#fff !important;font-weight:800 !important;font-size:clamp(0.75rem, 3.8vw, 0.95rem) !important;padding:0.85rem 1rem !important;border-radius:8px !important;text-decoration:none !important;text-transform:uppercase !important;letter-spacing:0.5px !important;text-align:center !important;box-shadow:0 8px 20px rgba(34, 197, 94, 0.3) !important;transition:transform 0.2s, box-shadow 0.2s !important;white-space:nowrap !important}
-    .hero-security-badges{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;gap:.4rem .75rem !important;font-size:.73rem !important;color:var(--text-secondary) !important;font-weight:600 !important;margin-top:8px !important;width:100% !important}
-    .hero-security-badges span{font-size:0.78rem !important;font-weight:700 !important;color:var(--text-secondary) !important;display:inline-flex !important;align-items:center !important;gap:0.25rem !important;letter-spacing:0.2px !important}
-    
-    /* Cache-bypassing Overrides for Social Proof Toasts & Hero spacing */
-    .social-proof-toast {
-      gap: 8px !important;
-      padding: 6px 10px !important;
-      border-radius: 8px !important;
-      max-width: 210px !important;
+    * { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+    html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; background-color: #fff; color: #0f172a; }
+
+    /* Animações 60 FPS */
+    @keyframes pulseSlow {
+      0%, 100% { transform: scale3d(1, 1, 1); box-shadow: 0 8px 25px -6px rgba(234, 88, 12, 0.6); }
+      50% { transform: scale3d(1.02, 1.02, 1); box-shadow: 0 14px 32px -6px rgba(234, 88, 12, 0.85); }
     }
-    .toast-icon {
-      width: 24px !important;
-      height: 24px !important;
-      font-size: 0.85rem !important;
-    }
-    .toast-content {
-      line-height: 1.3 !important;
-    }
-    .toast-title {
-      font-size: 0.72rem !important;
-    }
-    .toast-body {
-      font-size: 0.68rem !important;
-      margin: 1px 0 0 0 !important;
-    }
-    .toast-time {
-      font-size: 0.58rem !important;
-      margin-top: 2px !important;
-    }
-    @media (max-width: 500px) {
-      .social-proof-container {
-        left: 10px !important;
-        bottom: 15px !important;
-        right: auto !important;
-        max-width: 210px !important;
-      }
-      .social-proof-toast {
-        max-width: 210px !important;
-        width: auto !important;
-      }
-    }
+    .animate-pulse-slow { animation: pulseSlow 2.2s ease-in-out infinite; will-change: transform, box-shadow; }
+
+    .price-value-big { color: #ea580c !important; font-size: 3.4rem !important; line-height: 1 !important; font-weight: 900 !important; letter-spacing: -0.04em !important; }
+    @media (min-width: 640px) { .price-value-big { font-size: 5.2rem !important; } }
+    .price-cents-big { color: #ea580c !important; font-size: 1.85rem !important; line-height: 1 !important; font-weight: 900 !important; }
+    @media (min-width: 640px) { .price-cents-big { font-size: 2.8rem !important; } }
+
+    .hero-headline { font-size: clamp(1.75rem, 6.5vw, 3.8rem) !important; line-height: 1.14 !important; letter-spacing: -0.035em !important; font-weight: 900 !important; }
+
+    .promo-timer-capsule { background: linear-gradient(135deg, #e50914 0%, #b91c1c 100%) !important; border: 2px solid #ef4444 !important; border-radius: 8px !important; box-shadow: 0 10px 30px -4px rgba(220, 38, 38, 0.55) !important; }
+
+    /* Modal Styling */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; transition: opacity 0.3s ease; }
+    .modal-overlay.active { opacity: 1; }
+    .modal-content { background: #fff; border-radius: 24px; max-width: 460px; width: 100%; padding: 1.75rem 1.25rem; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.25); border: 2px solid #ea580c; text-align: center; }
+    .modal-close-btn { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.6rem; color: #94a3b8; cursor: pointer; }
+    .modal-alert-badge { background: #fef2f2; color: #dc2626; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 0.75rem; text-transform: uppercase; }
+    .modal-header h2 { font-size: 1.2rem; font-weight: 900; color: #0f172a; margin-bottom: 0.75rem; line-height: 1.3; }
+    .modal-body p { font-size: 0.9rem; color: #475569; margin-bottom: 1rem; line-height: 1.45; }
+    .modal-features-list { text-align: left; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; background: #fff7ed; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(234, 88, 12, 0.2); font-size: 0.88rem; color: #1e293b; }
+    .modal-btn-upgrade { display: block; width: 100%; background: #ea580c; color: #fff; font-weight: 900; padding: 0.95rem; border-radius: 9999px; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3); margin-bottom: 0.6rem; letter-spacing: 0.5px; }
+    .modal-btn-keep-basic { font-size: 0.82rem; color: #64748b; text-decoration: underline; font-weight: 700; cursor: pointer; }
   </style>
-
-  <!-- Google Fonts: Loaded asynchronously to prevent render blocking with optional font-display -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=optional" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=optional"></noscript>
-
-  <!-- Non-critical CSS: deferred so it doesn't block first paint -->
-  <link rel="preload" as="style" href="css/landing.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/landing.css"></noscript>
-
-  <!-- UTMify: track UTMs across funnel -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-subids
-    async
-    defer
-  ></script>
-
-  <!-- UTMify Pixel -->
-  <script>
-  window.pixelId = "6a4c43a59b3324aca82e49b5";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
 </head>
-<body>
+<body class="bg-white text-slate-900 antialiased">
 
-  <!-- Top Promo Banner -->
-  <div class="promo-banner-top">
-    <span>🏀 OFFER VALID TODAY ONLY • <strong id="promo-date"></strong></span>
+  <!-- TOP BANNER DE ESCASSEZ LARANJA -->
+  <div class="bg-sport-orange text-white text-center py-2.5 px-4 text-xs sm:text-sm font-black uppercase tracking-wider border-b border-black/20 flex items-center justify-center gap-2 shadow-md">
+    <span>🏀 OFERTA VÁLIDA APENAS HOJE • <strong id="promo-date" class="underline decoration-white/60">HOJE</strong></span>
   </div>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <div class="hero-badge">⚡ Digital Assistant Coach</div>
-    <h1>Build Better Basketball Practices <span>in Minutes, Not Hours.</span></h1>
-    
-    <p class="hero-subheadline">
-      <span>Relax while CoachBrain works for you.</span> Plan complete practices, create custom drills, organize every session and get instant coaching help whenever you need it.
-    </p>
-
-    <!-- Hero Mockup Image -->
-    <div class="hero-image-container" style="max-width: 780px; width: 100%; margin: 15px auto 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); line-height: 0; aspect-ratio: 4/3; background: #f1f5f9;">
-      <img src="images/hero_new.jpg?v=2" alt="CoachBrain Basketball Coaching Assistant App Mockup" width="600" height="450" style="width: 100%; height: auto; display: block;" fetchpriority="high">
-    </div>
-    
-    <div class="cta-container">
-      <a href="#app-glance" class="btn-hero-cta">GET INSTANT ACCESS NOW</a>
-      <div class="hero-security-badges">
-        <span>🔒 100% Secure Checkout</span>
-        <span>🛡️ 7-Day Money-Back Guarantee</span>
-        <span>⚡ Lifetime Access</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- Features Section representing 'Designed for Every Coach & Team' -->
-  <section id="recursos">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Designed for <span>Every Coach & Team</span></h2>
-        <p>Custom training sessions tailorable for youth, junior, and senior levels. Ideal for team coaches, personal trainers, and basketball academies.</p>
-      </div>
+  <!-- SEÇÃO HERO COACHBRAIN -->
+  <section class="relative bg-white pt-6 pb-10 sm:pt-14 sm:pb-20 overflow-hidden">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 text-center flex flex-col items-center">
       
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-item">
-          <span class="feature-meta-tag">01 / Practice Planning</span>
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Custom Practice Planning</h3>
-          <p>Input player age, count, court size, and duration. Instantly get a custom minute-by-minute session plan.</p>
-        </div>
-        
-        <!-- Feature 2 -->
-        <div class="feature-item">
-          <span class="feature-meta-tag">02 / Dynamic Constraints</span>
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Court Constraints Adjustment</h3>
-          <p>Only have half a court or 6 players? CoachBrain adjusts drills on the fly to maximize active reps.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feature-item">
-          <span class="feature-meta-tag">03 / Tactical IQ</span>
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Instant Tactical Solutions</h3>
-          <p>Ask tactical questions (e.g. beating a 2-3 zone) and get immediately actionable basketball plays.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Bonuses section representing 'BÔNUS' -->
-  <section id="bonuses" class="section-wrapper">
-    <div class="section-header">
-      <h2>Exclusive Bonuses Included <span>Today</span></h2>
-      <p>Unlock these digital training assets instantly when you secure your access.</p>
-    </div>
-    
-    <div class="bonus-grid">
-      <!-- Bonus 1 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus1.jpg" alt="Bonus 1 - Individual Technique Drills" class="bonus-thumb-img" loading="lazy" decoding="async">
-        </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONUS 1</span>
-          <h3>BONUS: Individual Technique Drills</h3>
-          <p>Focused routines for player workouts, shooting mechanics, and advanced ball-handling drills.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Value:</span>
-            <span class="bonus-value-original">$9.90</span>
-            <span class="bonus-value-free">FREE</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Bonus 2 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus2.jpg" alt="Bonus 2 - Complete Tactical Training Guide" class="bonus-thumb-img" loading="lazy" decoding="async">
-        </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONUS 2</span>
-          <h3>BONUS: Complete Tactical Training Guide</h3>
-          <p>An playbook with essential offensive plays, set pieces, and half-court structures.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Value:</span>
-            <span class="bonus-value-original">$12.90</span>
-            <span class="bonus-value-free">FREE</span>
-          </div>
-        </div>
+      <!-- Badge Superior -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black text-sport-orange border border-sport-orange/40 text-[11px] sm:text-sm font-black uppercase tracking-wider mb-4 sm:mb-6 shadow-md">
+        <span>⚡ METODOLOGIA INTELIGENTE PARA TREINADORES DE BASQUETEBOL</span>
       </div>
 
-      <!-- Bonus 3 -->
-      <div class="bonus-box">
-        <div class="bonus-img-wrapper">
-          <img src="images/bonus3.jpg" alt="Bonus 3 - Conditioning & Agility Circuits" class="bonus-thumb-img" loading="lazy" decoding="async">
-        </div>
-        <div class="bonus-content-wrapper">
-          <span class="bonus-meta-tag">🎁 BONUS 3</span>
-          <h3>BONUS: Conditioning & Agility Circuits</h3>
-          <p>Structured speed and physical development circuits in stations to build athleticism and quickness.</p>
-          <div class="bonus-value-bar">
-            <span class="bonus-value-label">Value:</span>
-            <span class="bonus-value-original">$15.90</span>
-            <span class="bonus-value-free">FREE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Headline Principal -->
+      <h1 class="font-display hero-headline text-black max-w-4xl px-1">
+        Transforma o Teu Telemóvel num <span class="text-sport-orange">Assistente Técnico de Basquetebol 24/7</span>
+      </h1>
 
-  <!-- App Peek Section (Look Inside the App / PandaVideo) -->
-  <section id="app-glance" class="section-wrapper" style="border-top: 1px solid var(--border-color); padding: 3rem 1.25rem 2rem;">
-    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
-      <span style="color: #e84e1b; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">LOOK INSIDE THE APP</span>
-      <h2 style="font-size: clamp(1.85rem, 4vw, 2.35rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; letter-spacing: -1px; text-align: center;">A Glance at What You'll Get</h2>
-      <p style="font-size: clamp(0.9rem, 2.5vw, 1.05rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.5; text-align: center;">
-        Real drills from the app with professional diagrams, detailed explanations and dynamic videos.
+      <!-- Subheadline -->
+      <p class="mt-3 sm:mt-4 text-sm sm:text-lg text-sport-gray font-medium max-w-2xl leading-relaxed px-1">
+        Gera treinos completos e personalizados para a tua equipa em segundos: escolhe o escalão, nível, objetivo da sessão e material disponível.
       </p>
+
+      <!-- VÍDEO DA HERO DO COACHBRAIN -->
+      <div class="mt-5 sm:mt-8 w-full max-w-[290px] sm:max-w-[320px] relative overflow-hidden rounded-2xl border-2 border-sport-orange shadow-2xl bg-black" style="aspect-ratio: 9/16; contain: layout paint;">
+        <video
+          id="app-preview-video"
+          src="videos/video_pg_coachbrain.mp4"
+          style="width: 100%; height: 100%; display: block; object-fit: cover;"
+          autoplay
+          muted
+          loop
+          playsinline>
+        </video>
+      </div>
+
+      <!-- Botão CTA Principal -->
+      <div class="mt-6 sm:mt-8 flex flex-col items-center gap-4 sm:gap-6 w-full">
+        <a 
+          href="#oferta" 
+          class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-5 py-4 sm:px-10 sm:py-5 text-sm sm:text-xl text-center leading-tight animate-pulse-slow w-full sm:w-auto bg-sport-orange border-2 border-black shadow-lg"
+          style="text-decoration: none;"
+        >
+          🏀 QUERO OS MEUS TREINOS AGORA!
+        </a>
+
+        <!-- Benefícios Rápidos CoachBrain -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-4 text-left w-full max-w-xl mx-auto mt-2">
+          <li class="flex items-center gap-3 text-xs sm:text-base font-bold text-black bg-sport-card p-3 sm:p-3.5 rounded-xl border border-sport-border">
+            <div class="h-6 w-6 shrink-0 rounded-full bg-sport-orange text-white grid place-items-center font-black text-xs">✓</div>
+            <span><strong>Gerador Inteligente</strong> de Treinos</span>
+          </li>
+          <li class="flex items-center gap-3 text-xs sm:text-base font-bold text-black bg-sport-card p-3 sm:p-3.5 rounded-xl border border-sport-border">
+            <div class="h-6 w-6 shrink-0 rounded-full bg-sport-orange text-white grid place-items-center font-black text-xs">✓</div>
+            <span><strong>Adaptação Automática</strong> por Escalão</span>
+          </li>
+          <li class="flex items-center gap-3 text-xs sm:text-base font-bold text-black bg-sport-card p-3 sm:p-3.5 rounded-xl border border-sport-border">
+            <div class="h-6 w-6 shrink-0 rounded-full bg-sport-orange text-white grid place-items-center font-black text-xs">✓</div>
+            <span><strong>Exercícios, Táticas e Física</strong></span>
+          </li>
+          <li class="flex items-center gap-3 text-xs sm:text-base font-bold text-black bg-sport-card p-3 sm:p-3.5 rounded-xl border border-sport-border">
+            <div class="h-6 w-6 shrink-0 rounded-full bg-sport-orange text-white grid place-items-center font-black text-xs">✓</div>
+            <span>Acesso Imediato no Telemóvel 24/7</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
-    
-    <!-- Video Container (Native Video with Intersection Observer Autoplay/Audio control) -->
-    <div class="hero-video-container" style="max-width: 320px; width: 75%; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 8px 24px rgba(0,0,0,.11); aspect-ratio: 9/16; background: #000; position: relative;">
-      <video
-        id="app-preview-video"
-        src="videos/video_pg_coachbrain.mp4"
-        style="width: 100%; height: 100%; display: block;"
-        autoplay
-        muted
-        loop
-        playsinline>
-      </video>
-    </div>
-    <script>
-      (function() {
-        var video = document.getElementById('app-preview-video');
-        if (!video) return;
-
-        // Force play unmuted immediately when user clicks the hero CTA button
-        var heroBtn = document.querySelector('a[href="#app-glance"]');
-        if (heroBtn) {
-          heroBtn.addEventListener('click', function() {
-            video.muted = false;
-            video.currentTime = 0;
-            var playPromise = video.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(function(e) {
-                // If browser blocks, try muted play fallback
-                video.muted = true;
-                video.play();
-              });
-            }
-          });
-        }
-
-        var options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5 // Play when 50% of the video is visible
-        };
-
-        var observer = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              // Only trigger scroll autoplay if the video is not already playing
-              if (video.paused) {
-                video.muted = false; 
-                video.currentTime = 0;
-                var playPromise = video.play();
-                if (playPromise !== undefined) {
-                  playPromise.catch(function(error) {
-                    video.muted = true;
-                    video.play();
-                  });
-                }
-              }
-            } else {
-              // Pause when out of view
-              video.pause();
-            }
-          });
-        }, options);
-
-        observer.observe(video);
-      })();
-    </script>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>What Other <span>Coaches Say</span></h2>
-        <p>Read verified feedback from youth league, school, and club trainers.</p>
+  <!-- SECCIÓN: CÓMO FUNCIONA (POSICIONADA LOGO APÓS A HERO COMO SOLICITADO) -->
+  <section class="bg-white py-12 sm:py-20 border-t border-sport-border">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
+          PASSO A PASSO
+        </span>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-black text-black">
+          Como Funciona?
+        </h2>
+        <p class="mt-2 text-xs sm:text-base text-sport-gray font-medium px-2">
+          Ter o teu planeamento de treinos pronto em menos de 1 minuto é assim tão simples:
+        </p>
       </div>
+
+      <div class="mt-8 sm:mt-12 grid gap-4 sm:gap-8 grid-cols-1 md:grid-cols-3">
+        
+        <div class="relative rounded-2xl bg-sport-card border border-sport-border p-5 sm:p-8 text-center shadow-sm hover:border-black transition-all">
+          <div class="mx-auto grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-black text-sport-orange font-black text-xl sm:text-2xl shadow-md border border-sport-orange">1</div>
+          <h3 class="mt-4 sm:mt-6 font-display text-base sm:text-xl font-black text-black">Garante a tua conta hoje</h3>
+          <p class="mt-1.5 text-sport-gray text-xs sm:text-base">Clica no botão e acede ao CoachBrain com a oferta especial e todos os bónus inclusos.</p>
+        </div>
+
+        <div class="relative rounded-2xl bg-sport-card border border-sport-border p-5 sm:p-8 text-center shadow-sm hover:border-black transition-all">
+          <div class="mx-auto grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-black text-sport-orange font-black text-xl sm:text-2xl shadow-md border border-sport-orange">2</div>
+          <h3 class="mt-4 sm:mt-6 font-display text-base sm:text-xl font-black text-black">Acesso Instantâneo</h3>
+          <p class="mt-1.5 text-sport-gray text-xs sm:text-base">Recebes os teus dados de acesso imediato no teu e-mail em menos de 1 minuto.</p>
+        </div>
+
+        <div class="relative rounded-2xl bg-sport-card border border-sport-border p-5 sm:p-8 text-center shadow-sm hover:border-black transition-all">
+          <div class="mx-auto grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-2xl bg-black text-sport-orange font-black text-xl sm:text-2xl shadow-md border border-sport-orange">3</div>
+          <h3 class="mt-4 sm:mt-6 font-display text-base sm:text-xl font-black text-black">Cria o Teu Primeiro Treino</h3>
+          <p class="mt-1.5 text-sport-gray text-xs sm:text-base">Abre o CoachBrain no telemóvel, seleciona o teu escalão e gera a sessão para o próximo treino.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: TESTIMONIOS -->
+  <section class="bg-white py-12 sm:py-20 border-t border-sport-border overflow-hidden">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 text-black">
       
-      <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"I used to spend at least an hour planning every practice. Now I just tell CoachBrain what I need, and within minutes I have a complete session ready. It's become part of my daily routine."</p>
-          <div class="testimonial-author">Michael R.</div>
-          <div class="testimonial-role">High School Basketball Coach</div>
+      <div class="text-center mb-8 sm:mb-12">
+        <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
+          RESULTADOS REAIS
+        </span>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-black text-black">
+          Treinadores que Já Transformaram as Suas Sessões
+        </h2>
+        <p class="mt-2 text-xs sm:text-base text-sport-gray max-w-2xl mx-auto px-2">
+          Vê como outros treinadores e preparadores estão a economizar horas de planeamento e a fazer evoluir as suas equipas.
+        </p>
+      </div>
+
+      <!-- Carrossel de Depoimentos -->
+      <div class="relative max-w-4xl mx-auto">
+        <button 
+          id="prevTestimonial" 
+          aria-label="Depoimento anterior"
+          class="hidden sm:flex absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-sport-orange border-2 border-sport-orange items-center justify-center font-black text-lg shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
+        >
+          &#10094;
+        </button>
+
+        <div 
+          id="testimonialSlider" 
+          class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-2 items-center"
+          style="scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;"
+        >
+          <div class="w-[270px] sm:w-[320px] aspect-[720/1260] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-alvaro.webp" alt="Depoimento Oliver" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
+          </div>
+          <div class="w-[270px] sm:w-[320px] aspect-[720/1260] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-lucia.webp" alt="Depoimento James" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
+          </div>
+          <div class="w-[270px] sm:w-[320px] aspect-[720/1260] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-sergio.webp" alt="Depoimento Emily" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
+          </div>
+          <div class="w-[270px] sm:w-[320px] aspect-[720/1260] shrink-0 snap-center rounded-3xl overflow-hidden border-2 border-sport-border bg-white shadow-xl hover:border-black transition-all">
+            <img src="depoimento-javier.webp" alt="Depoimento Daniel" class="w-full h-full object-cover block" loading="lazy" decoding="async" width="720" height="1260" />
+          </div>
         </div>
+
+        <button 
+          id="nextTestimonial" 
+          aria-label="Seguinte depoimento"
+          class="hidden sm:flex absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black text-sport-orange border-2 border-sport-orange items-center justify-center font-black text-lg shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Controles Mobile -->
+      <div class="mt-4 flex items-center justify-center gap-4 sm:gap-6">
+        <button id="prevMobileBtn" class="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black text-sport-orange border border-sport-orange font-bold text-sm shadow-md active:scale-95" aria-label="Anterior">&#10094;</button>
+        <div class="flex items-center gap-2" id="testimonialDots">
+          <button class="w-3 h-3 rounded-full bg-black transition-all dot-indicator" data-index="0"></button>
+          <button class="w-2.5 h-2.5 rounded-full bg-sport-border transition-all dot-indicator" data-index="1"></button>
+          <button class="w-2.5 h-2.5 rounded-full bg-sport-border transition-all dot-indicator" data-index="2"></button>
+          <button class="w-2.5 h-2.5 rounded-full bg-sport-border transition-all dot-indicator" data-index="3"></button>
+        </div>
+        <button id="nextMobileBtn" class="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black text-sport-orange border border-sport-orange font-bold text-sm shadow-md active:scale-95" aria-label="Seguinte">&#10095;</button>
+      </div>
+
+      <div class="mt-8 flex justify-center px-2">
+        <a 
+          href="#oferta" 
+          class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 px-6 py-4 text-sm sm:text-base bg-sport-orange border-2 border-black w-full sm:w-auto shadow-md"
+          style="text-decoration: none;"
+        >
+          🏀 QUERO COMEÇAR HOJE MESMO!
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN: AUTORIDAD / ASSISTENTE TÉCNICO -->
+  <section class="bg-white py-12 sm:py-20 border-t border-sport-border">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-14">
         
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"Coaching kids of different skill levels isn't easy. CoachBrain gives me drills that actually fit my team, and it saves me so much time every single week."</p>
-          <div class="testimonial-author">Jason T.</div>
-          <div class="testimonial-role">Youth Basketball Coach</div>
+        <div class="w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] mx-auto shrink-0">
+          <div class="w-full h-full relative rounded-full overflow-hidden shadow-2xl border-4 border-black bg-black">
+            <img src="perfil.webp" alt="Preparador Físico CoachBrain" class="w-full h-full object-cover object-center rounded-full block" loading="lazy" decoding="async" width="280" height="280" />
+          </div>
         </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"What I like most is that I can ask questions anytime. Whether I need a shooting drill, a defensive exercise or a warm-up, CoachBrain always gives me useful ideas almost instantly."</p>
-          <div class="testimonial-author">Daniel M.</div>
-          <div class="testimonial-role">AAU Coach</div>
+
+        <div class="flex-1 text-center md:text-left">
+          <div class="inline-block px-2.5 py-0.5 bg-sport-orange text-white font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
+            EXPERIÊNCIA PROFISSIONAL
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-black text-black mb-3 sm:mb-4">
+            Conhece o Teu Assistente Técnico
+          </h2>
+          <div class="space-y-3 text-xs sm:text-base text-sport-gray font-medium leading-relaxed">
+            <p>
+              Desenvolvemos o <strong>CoachBrain</strong> com a metodologia dos melhores especialistas em basquetebol de alto rendimento para colocar nas tuas mãos <strong>sessões de treino e táticas completas em segundos</strong>.
+            </p>
+            <p>
+              Com o gerador inteligente adaptado por escalão (desde o Minibasquete aos Séniores), nível, tempo de treino e material, deixas de perder horas a preparar sessões antes de ir para o pavilhão.
+            </p>
+            <p>
+              O nosso objetivo é dar-te um planeamento de elite para que a tua equipa esteja sempre um passo à frente dos adversários. 🏀💪
+            </p>
+          </div>
         </div>
-        
-        <!-- Testimonial 4 -->
-        <div class="testimonial-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-quote">"I wasn't looking for another drill library. I needed something that could actually help me plan practices faster. CoachBrain does exactly that, and now I spend more time coaching instead of planning."</p>
-          <div class="testimonial-author">Chris W.</div>
-          <div class="testimonial-role">Basketball Coach</div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Pricing section -->
-  <section class="pricing-wrapper" id="pricing">
-    <div class="section-wrapper" style="padding-top: 0; padding-bottom: 2rem;">
-      <div class="section-header">
-        <h2>Choose Your <span>Coaching Tier</span></h2>
-        <p>Get lifetime access today. Pay once, use forever.</p>
+  <!-- SECCIÓN: BÓNUS EXCLUSIVOS -->
+  <section class="bg-white py-12 sm:py-20 border-t border-sport-border">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
+        <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-md mb-2">
+          OFERTA 100% GRATUITA HOJE
+        </span>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-black text-black">
+          Bónus Exclusivos Incluídos no Teu Acesso
+        </h2>
+        <p class="mt-2 text-xs sm:text-base text-sport-gray font-medium px-2">
+          Potencia os resultados da tua equipa com estes 4 guias e ferramentas complementares sem qualquer custo adicional:
+        </p>
       </div>
 
-      <div class="pricing-grid">
-        <!-- Basic Plan -->
-        <div class="pricing-card">
-          <h3 class="plan-title">Basic Coach</h3>
-          <div class="price-box">
-            <span class="price-original">de $19.99</span>
-            <h4>$9<span>.99</span></h4>
+      <div class="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4">
+        
+        <!-- Bono 1 -->
+        <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
+          <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
+            <img src="bono1-movilidad.webp" alt="Bónus 1: Mobilidade e Agilidade" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
           </div>
-          
-          <div class="plan-features">
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>24/7 AI Coaching Assistant</span>
+          <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #1</span>
+          <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Mobilidade e Agilidade</h3>
+          <p class="mt-1 text-[11px] sm:text-xs text-sport-gray hidden sm:block">Aumenta a amplitude de movimento, agilidade e velocidade nas mudanças de direção.</p>
+        </div>
+
+        <!-- Bono 2 -->
+        <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
+          <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
+            <img src="bono2-alimentacion.webp" alt="Bónus 2: Nutrição Desportiva" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+          </div>
+          <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #2</span>
+          <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Nutrição Desportiva</h3>
+          <p class="mt-1 text-[11px] sm:text-xs text-sport-gray hidden sm:block">O que os atletas devem consumir antes e depois dos jogos para manter a energia máxima.</p>
+        </div>
+
+        <!-- Bono 3 -->
+        <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
+          <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
+            <img src="bono3-antilesiones.webp" alt="Bónus 3: Protocolo Anti-Lesões" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+          </div>
+          <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #3</span>
+          <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Protocolo Anti-Lesões</h3>
+          <p class="mt-1 text-[11px] sm:text-xs text-sport-gray hidden sm:block">Rotinas específicas de prevenção e fortalecimento para joelhos, tornozelos e ombros.</p>
+        </div>
+
+        <!-- Bono 4 -->
+        <div class="group h-full rounded-2xl border border-sport-border bg-sport-card p-3.5 sm:p-6 shadow-sm text-center flex flex-col items-center hover:border-black transition-all">
+          <div class="mb-3 sm:mb-5 w-full aspect-square rounded-xl overflow-hidden bg-black border border-sport-border shadow-inner">
+            <img src="bono4-suplementacion.webp" alt="Bónus 4: Guia de Suplementação" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="600" />
+          </div>
+          <span class="text-[10px] sm:text-xs font-black text-sport-gray uppercase mb-0.5">BÓNUS #4</span>
+          <h3 class="font-display text-xs sm:text-base font-black text-black leading-tight">Guia de Suplementação</h3>
+          <p class="mt-1 text-[11px] sm:text-xs text-sport-gray hidden sm:block">Os suplementos comprovados cientificamente para otimizar a recuperação e o rendimento.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-8 sm:mt-10 flex justify-center px-2">
+        <a 
+          href="#oferta" 
+          class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 px-6 py-4 text-sm sm:text-base bg-sport-orange border-2 border-black w-full sm:w-auto shadow-md"
+          style="text-decoration: none;"
+        >
+          🎁 QUERO TODOS OS MEUS BÓNUS HOJE!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: TABLA DE OFERTAS COACHBRAIN (7,90 € / 14,90 €) -->
+  <section id="oferta" class="bg-white py-12 sm:py-24 border-t border-sport-border scroll-mt-14">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      
+      <div class="mx-auto max-w-2xl text-center mb-8 sm:mb-14">
+        <span class="inline-block px-3 py-1 bg-black text-sport-orange font-black text-[11px] sm:text-sm uppercase tracking-widest rounded-full mb-2 shadow-md">
+          ⚡ PREÇO PROMOCIONAL POR TEMPO LIMITADO
+        </span>
+        <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-black text-black">
+          Escolhe O Teu Plano de Acesso
+        </h2>
+        <p class="mt-2 text-xs sm:text-lg text-sport-gray px-2">
+          Começa hoje mesmo a transformar o teu planeamento e a elevar o nível da tua equipa.
+        </p>
+
+        <!-- TIMER DE ESCASSEZ VERMELHO -->
+        <div class="mt-5 sm:mt-7 inline-flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-8 py-2.5 sm:py-3.5 rounded-lg promo-timer-capsule text-white max-w-full">
+          <span class="text-sm sm:text-xl animate-pulse shrink-0">⏰</span>
+          <span class="text-[11px] sm:text-sm md:text-base font-black uppercase tracking-wider text-white text-center leading-tight">
+            Oferta promocional expira em:
+          </span>
+          <span id="promoTimer" class="font-mono text-base sm:text-2xl font-black text-white bg-black/40 px-2 py-0.5 rounded">
+            20:00
+          </span>
+        </div>
+      </div>
+
+      <!-- GRID DE CARDS -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+        
+        <!-- CARD 1: PACK BÁSICO (7,90 €) -->
+        <div class="relative rounded-3xl border-2 border-white/20 bg-black text-white p-5 sm:p-8 flex flex-col justify-between shadow-2xl text-center">
+          <div>
+            <div class="inline-block rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-[11px] font-black uppercase tracking-wider text-gray-300 mb-3">
+              OPÇÃO BÁSICA
             </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Unlimited tactical & rule questions</span>
+            
+            <h3 class="font-display text-xl sm:text-2xl font-black text-white">
+              Pack Básico CoachBrain
+            </h3>
+            <p class="text-xs text-gray-400 mt-1">
+              Acesso ao gerador de treinos e fichas em PDF
+            </p>
+
+            <!-- Preço Básico (7,90 €) -->
+            <div class="mt-4 flex flex-col items-center justify-center">
+              <p class="text-sm text-gray-400 line-through font-bold">De 27,00 €</p>
+              <div role="img" aria-label="Por apenas 7,90 €" class="flex items-baseline justify-center gap-1 mt-1">
+                <span class="text-base sm:text-lg font-black text-gray-300">POR APENAS</span>
+                <span class="font-display price-value-big">7</span>
+                <span class="price-cents-big">,90</span>
+                <span class="text-xs sm:text-base font-bold text-gray-400 ml-0.5">€</span>
+              </div>
+              <p class="mt-1.5 text-[11px] text-gray-400 font-medium">
+                Pagamento único • Sem mensalidades • Acesso vitalício
+              </p>
             </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Custom practice plan generator</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Drill adaptation by player age</span>
-            </div>
-            <div class="plan-feature-item disabled">
-              <span class="plan-feature-check">×</span>
-              <span>Complete +150 Video Drills Library</span>
-            </div>
-            <div class="plan-feature-item disabled">
-              <span class="plan-feature-check">×</span>
-              <span>New drills added regularly</span>
-            </div>
-            <div class="plan-feature-item disabled">
-              <span class="plan-feature-check">×</span>
-              <span>Pre-built planning templates</span>
-            </div>
-            <div class="plan-feature-item disabled">
-              <span class="plan-feature-check">×</span>
-              <span>Exclusive prompts for coaches</span>
-            </div>
-            <div class="plan-feature-item disabled">
-              <span class="plan-feature-check">×</span>
-              <span>Priority on new coaching tools</span>
+
+            <!-- Lista de entregáveis BÁSICO -->
+            <div class="mt-6 border-t border-white/15 pt-5 text-left">
+              <p class="font-display text-[11px] font-black uppercase tracking-wider text-gray-300 mb-3 text-center">
+                O QUE ESTÁ INCLUÍDO NESTE PLANO:
+              </p>
+              <ul class="space-y-2.5 text-xs text-white">
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Gerador de Treinos e Fichas Táticas</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Material 100% Imprimível e Consultável no Telemóvel</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Exercícios de Técnica, Tática e Preparação Física</span>
+                </li>
+                <li class="flex items-center gap-2 font-medium text-gray-500 bg-white/5 p-2.5 rounded-xl border border-white/10 line-through">
+                  <span class="text-gray-400 font-black bg-white/10 w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✕</span>
+                  <span>Vídeos Explicativos de Exercícios</span>
+                </li>
+                <li class="flex items-center gap-2 font-medium text-gray-500 bg-white/5 p-2.5 rounded-xl border border-white/10 line-through">
+                  <span class="text-gray-400 font-black bg-white/10 w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✕</span>
+                  <span>4 Bónus Exclusivos VIP</span>
+                </li>
+                <li class="flex items-center gap-2 font-medium text-gray-500 bg-white/5 p-2.5 rounded-xl border border-white/10 line-through">
+                  <span class="text-gray-400 font-black bg-white/10 w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✕</span>
+                  <span>Acesso a Atualizações VIP de Conteúdo</span>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <button id="btn-buy-basic" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto; border: none;">
-            Get Basic Coach
+          <!-- Botão CTA Básico -->
+          <div class="mt-6">
+            <button 
+              id="btn-buy-basic"
+              class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-black transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-6 py-4 text-xs sm:text-sm w-full bg-white border-2 border-white shadow-md hover:bg-sport-orange hover:border-sport-orange hover:text-white cursor-pointer"
+            >
+              🏀 QUERO O PLANO BÁSICO (7,90 €)!
+            </button>
+            <p class="mt-2.5 text-[10px] text-gray-400 font-medium">
+              🔒 Pagamento seguro com garantia de 7 dias
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2: PACK COMPLETO VIP (14,90 €) -->
+        <div class="relative rounded-3xl border-4 border-sport-orange bg-black text-white p-5 sm:p-8 flex flex-col justify-between shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] text-center ring-4 ring-sport-orange/60 mt-4 lg:mt-0">
+          
+          <!-- Badge Superior -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-sport-orange border-2 border-black px-4 py-1 text-[11px] sm:text-xs font-black uppercase tracking-widest text-white shadow-lg whitespace-nowrap">
+            ⭐ MAIS ESCOLHIDO (TUDO INCLUÍDO)
+          </div>
+
+          <div>
+            <div class="inline-block rounded-full bg-sport-orange/20 text-sport-orange border border-sport-orange/40 px-3.5 py-1 text-[11px] font-black uppercase tracking-wider mb-3 mt-1">
+              EXPERIÊNCIA COMPLETA VIP
+            </div>
+            
+            <h3 class="font-display text-xl sm:text-2xl font-black text-white">
+              Pack Completo VIP CoachBrain
+            </h3>
+            <p class="text-xs text-gray-300 mt-1">
+              Gerador de Treinos + Biblioteca de Vídeos Explicativos + 4 Bónus VIP
+            </p>
+
+            <!-- Preço Completo (14,90 €) -->
+            <div class="mt-4 flex flex-col items-center justify-center">
+              <p class="text-sm text-gray-400 line-through font-bold">De 47,00 €</p>
+              <div role="img" aria-label="Por apenas 14,90 €" class="flex items-baseline justify-center gap-1 mt-1">
+                <span class="text-base sm:text-lg font-black text-gray-300">POR APENAS</span>
+                <span class="font-display price-value-big">14</span>
+                <span class="price-cents-big">,90</span>
+                <span class="text-xs sm:text-base font-bold text-gray-400 ml-0.5">€</span>
+              </div>
+              <p class="mt-1.5 text-[11px] text-gray-300 font-medium">
+                Pagamento único • Sem mensalidades • Acesso ilimitado para sempre
+              </p>
+            </div>
+
+            <!-- Lista de entregáveis COMPLETO -->
+            <div class="mt-6 border-t border-white/15 pt-5 text-left">
+              <p class="font-display text-[11px] font-black uppercase tracking-wider text-sport-orange mb-3 text-center">
+                TUDO O QUE LEVAS HOJE:
+              </p>
+              <ul class="space-y-2.5 text-xs text-white">
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Gerador de Treinos e Fichas Táticas Completo</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Biblioteca de Vídeos Explicativos de Cada Exercício</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Bónus #1: Mobilidade e Agilidade para Basquetebol</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Bónus #2: Guia de Nutrição Desportiva</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Bónus #3: Protocolo Anti-Lesões</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Bónus #4: Guia de Suplementação</span>
+                </li>
+                <li class="flex items-center gap-2 font-bold bg-white/10 p-2.5 rounded-xl border border-white/15">
+                  <span class="text-white font-black bg-sport-orange w-4 h-4 rounded-full grid place-items-center text-[10px] shrink-0">✓</span>
+                  <span>Acesso Vitalício e Atualizações VIP</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Botão CTA Completo -->
+          <div class="mt-6">
+            <a 
+              href="https://go.centerpag.com/PPU38CQFMIU" 
+              class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-widest text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-6 py-4 text-xs sm:text-base animate-pulse-slow w-full bg-sport-orange border-2 border-black shadow-xl"
+              style="text-decoration: none;"
+            >
+              🏀 QUERO O PACK POR 14,90 €!
+            </a>
+            <p class="mt-2.5 text-[10px] text-gray-400 font-medium">
+              🔒 Pagamento seguro e encriptado com garantia de 7 dias
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN: GARANTÍA -->
+  <section class="bg-white py-12 border-t border-sport-border">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <div class="rounded-2xl sm:rounded-3xl border-2 border-black bg-black p-6 sm:p-10 text-center flex flex-col items-center shadow-2xl">
+        
+        <div class="mb-4 w-full max-w-[160px] sm:max-w-[210px] mx-auto aspect-square">
+          <img src="garantia.webp" alt="Garantia Incondicional de 7 Dias" class="w-full h-full object-contain drop-shadow-lg mx-auto block" loading="lazy" decoding="async" width="210" height="210" />
+        </div>
+
+        <h3 class="font-display text-xl sm:text-3xl font-black text-white">
+          Garantia Incondicional de 7 Dias
+        </h3>
+        
+        <p class="mt-2 text-xs sm:text-base text-gray-300 max-w-xl leading-relaxed">
+          Experimenta o CoachBrain durante 7 dias completos. Se sentires que não te poupa tempo e não melhora o rendimento da tua equipa no pavilhão, devolvemos <strong class="text-white">100% do teu dinheiro</strong> de imediato e sem perguntas.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+  <section class="bg-white py-12 sm:py-20 border-t border-sport-border">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      
+      <div class="text-center mb-8">
+        <h2 class="font-display text-2xl sm:text-4xl font-black text-black">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
+          <button type="button" onclick="toggleFaq(1)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
+            <span>Como recebo o meu acesso ao CoachBrain?</span>
+            <span id="faq-icon-1" class="text-black text-lg font-black shrink-0">＋</span>
           </button>
-          <div class="security-badges-container">
-            <div class="badge-item">🔒 Secure Checkout</div>
-            <div class="badge-item">🛡️ 7-Day Refund Guarantee</div>
-            <div class="badge-item">⚡ Instant Lifetime Access</div>
+          <div id="faq-ans-1" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
+            O acesso é 100% imediato. Após a confirmação do pagamento, receberás um e-mail com os teus dados de acesso direto para usares o CoachBrain no telemóvel, tablet ou computador.
           </div>
         </div>
 
-        <!-- Complete Plan (Featured/Premium) -->
-        <div class="pricing-card premium">
-          <span class="pricing-badge">Most Popular</span>
-          <h3 class="plan-title">Complete Coach</h3>
-          <div class="price-box">
-            <span class="price-original">de $49.99</span>
-            <h4>$24<span>.99</span></h4>
-          </div>
-          
-          <div class="plan-features">
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Everything in Basic Coach</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BONUS</span> Complete +150 Video Drills Library</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BONUS</span> Individual Technique Exercises</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BONUS</span> Tactical Training Guide</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BONUS</span> Conditioning & Agility circuits</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>New drills added regularly</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Pre-built planning templates</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Exclusive prompts for coaches</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Priority on new coaching tools</span>
-            </div>
-          </div>
-
-          <a href="https://pay.hotmart.com/F106681760W?off=3lay4tvq&checkoutMode=10" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
-            Get Complete Coach
-          </a>
-          <div class="security-badges-container">
-            <div class="badge-item">🔒 Secure Checkout</div>
-            <div class="badge-item">🛡️ 7-Day Refund Guarantee</div>
-            <div class="badge-item">⚡ Instant Lifetime Access</div>
+        <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
+          <button type="button" onclick="toggleFaq(2)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
+            <span>Posso consultar os treinos no telemóvel ou imprimir?</span>
+            <span id="faq-icon-2" class="text-black text-lg font-black shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-2" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
+            Com certeza! Podes usar o CoachBrain diretamente no ecrã do teu telemóvel no pavilhão ou, se preferires, guardar e imprimir os treinos em formato PDF.
           </div>
         </div>
+
+        <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
+          <button type="button" onclick="toggleFaq(3)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
+            <span>O CoachBrain serve para que escalões de basquetebol?</span>
+            <span id="faq-icon-3" class="text-black text-lg font-black shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-3" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
+            O CoachBrain adapta-se a todos os escalões: desde a iniciação e Minibasquete (Sub-10, Sub-12) até ao basquetebol de formação (Sub-14, Sub-16, Sub-18) e equipas Séniores.
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-sport-border bg-sport-card overflow-hidden">
+          <button type="button" onclick="toggleFaq(4)" aria-expanded="false" class="w-full flex items-center justify-between p-4 sm:p-5 text-left font-display font-black text-sm sm:text-base text-black gap-2 cursor-pointer">
+            <span>Existe alguma mensalidade ou fidelização?</span>
+            <span id="faq-icon-4" class="text-black text-lg font-black shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-4" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-sport-gray leading-relaxed border-t border-sport-border/60 pt-3">
+            Não. O pagamento é único segundo o plano escolhido. Não há mensalidades, subscrições nem custos escondidos. O teu acesso é vitalício.
+          </div>
+        </div>
+
       </div>
 
-      <!-- 7 Day Guarantee Block -->
-      <div class="guarantee-block">
-        <div class="guarantee-seal">🛡️</div>
-        <div class="guarantee-text">
-          <h3>7-Day Unconditional Money-Back Guarantee</h3>
-          <p>Try CoachBrain for 7 days. If you're not saving hours planning or don't feel it's helping your team, email us or contact support, and <strong>we'll refund 100% of your money</strong>. No questions, no hassle.</p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- FAQ Section representing 'Garantia de 7 dias e perguntas' -->
-  <section id="faq" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
-    <div class="section-header">
-      <h2>Frequently Asked <span>Questions</span></h2>
-    </div>
+  <!-- SECCIÓN FINAL -->
+  <section class="bg-black py-12 sm:py-20 text-center text-white border-t border-sport-border">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      
+      <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-white px-1">
+        Domina o Pavilhão e o Teu Planeamento <br class="hidden sm:inline" />
+        <span class="text-sport-orange">Agora Mesmo.</span>
+      </h2>
 
-    <div class="faq-container">
-      <div class="faq-card">
-        <div class="faq-title">How do I access CoachBrain? <span>+</span></div>
-        <div class="faq-desc">Immediately after payment confirmation, you will receive an email with secure credentials to access the platform from any device (phone, tablet, computer).</div>
+      <p class="mt-3 text-xs sm:text-lg text-gray-300 max-w-xl mx-auto px-2">
+        Junta-te a centenas de treinadores que já estão a planear os seus treinos com inteligência e a elevar a sua equipa.
+      </p>
+
+      <div class="mt-6 sm:mt-8 flex justify-center px-2">
+        <a 
+          href="#oferta" 
+          class="inline-flex items-center justify-center gap-2 rounded-full font-black uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 active:scale-95 px-8 py-4 sm:px-10 sm:py-5 text-base sm:text-xl animate-pulse-slow w-full sm:w-auto bg-sport-orange shadow-xl"
+          style="text-decoration: none;"
+        >
+          🏀 QUERO O MEU ACESSO POR 14,90 €!
+        </a>
       </div>
 
-      <div class="faq-card">
-        <div class="faq-title">Are there any monthly fees? <span>+</span></div>
-        <div class="faq-desc">No! This is a launch offer. You pay a one-time fee today and get lifetime access with no recurring subscriptions.</div>
-      </div>
+      <p class="mt-4 text-[11px] sm:text-xs text-gray-400">
+        🔒 Compra 100% Segura • Acesso Instantâneo • Garantia de 7 Dias
+      </p>
 
-      <div class="faq-card">
-        <div class="faq-title">Does it work for all age groups? <span>+</span></div>
-        <div class="faq-desc">Yes. CoachBrain is trained to adapt plans from basic U8 coordination drills to advanced varsity team playbooks.</div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-title">How does the 7-day guarantee work? <span>+</span></div>
-        <div class="faq-desc">If you aren't satisfied with CoachBrain within the first 7 days, let us know and we will issue a full refund immediately.</div>
-      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer-wrap">
-    <p>&copy; 2026 BasketballPro & CoachBrain. All rights reserved. Interactive coaching assistant platform.</p>
+  <!-- FOOTER -->
+  <footer class="bg-black py-8 border-t border-white/10 text-center text-xs text-gray-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>© 2026 CoachBrain Basquetebol. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
-  <!-- Upgrade Popup Modal -->
+  <!-- UPGRADE POPUP MODAL -->
   <div id="upgradeModal" class="modal-overlay" style="display: none;">
     <div class="modal-content">
       <button class="modal-close-btn" id="closeModalBtn" aria-label="Close">&times;</button>
       <div class="modal-header">
-        <span class="modal-alert-badge">⚠️ WAIT! EXCLUSIVE ONE-TIME UPGRADE</span>
-        <h2>Do you want visual video drills for your practice?</h2>
+        <span class="modal-alert-badge">⚠️ ANTES DE CONTINUARES COM O PACK BÁSICO</span>
+        <h2>Queres Também Acesso à Biblioteca de Vídeos e Bónus VIP?</h2>
       </div>
       <div class="modal-body">
-        <p>For only <strong>$14.99 USD more</strong>, you can upgrade to the <strong>Complete Plan</strong> which includes:</p>
+        <p>Por apenas <strong>14,90 €</strong>, podes levar o <strong>Pack Completo VIP CoachBrain</strong> com a biblioteca de vídeos explicativos de cada exercício, os 4 bónus e acesso a todas as atualizações.</p>
         <ul class="modal-features-list">
-          <li>🏀 <strong>+150 Video Drills Library</strong> - Watch exactly how to run every drill in HD.</li>
-          <li>📅 <strong>Pre-built Season Planning Templates</strong> - Structure your entire year in minutes.</li>
-          <li>⚙️ <strong>Exclusive Prompts & New Tools</strong> - Get the best inputs for your AI assistant coach.</li>
+          <li>🏀 <strong>Biblioteca com Vídeos Explicativos dos Exercícios</strong></li>
+          <li>📋 <strong>Guias Táticos e Circuitos de Agilidade</strong></li>
+          <li>📅 <strong>4 Bónus VIP de Nutrição, Lesões e Mobilidade</strong></li>
+          <li>⚙️ <strong>Atualizações Vitalícias de Conteúdo</strong></li>
         </ul>
-        <p class="modal-savings-tag">You save 50% on this exclusive offer by upgrading now.</p>
         
-        <a id="btnUpgrade" href="https://pay.hotmart.com/F106681760W?off=v29tut0n&checkoutMode=10" class="modal-btn-upgrade">YES, UPGRADE MY PLAN FOR +$14.99</a>
-        <button id="btnKeepBasic" class="modal-btn-keep-basic">No, thanks. I prefer to stay with the Basic Plan for $9.99</button>
+        <a id="btnUpgrade" href="https://go.centerpag.com/PPU38CQFMIT" class="modal-btn-upgrade" style="text-decoration: none;">SIM, QUERO O PACK COMPLETO POR 14,90 €</a>
+        <a id="btnKeepBasic" href="https://go.centerpag.com/PPU38CQFMIS" class="modal-btn-keep-basic">CONTINUAR COM O PACK BÁSICO POR 7,90 €</a>
       </div>
     </div>
   </div>
 
-  <!-- Custom Social Proof Container -->
-  <div class="social-proof-container" id="social-proof"></div>
-
-  <!-- FAQ Accordion and Countdown Timer script -->
+  <!-- SCRIPTS (FAQ, SLIDER, TIMER 20M, UTMs) -->
   <script>
-    // FAQ Accordion
-    document.querySelectorAll('.faq-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const isActive = card.classList.contains('active');
-        document.querySelectorAll('.faq-card').forEach(c => {
-          c.classList.remove('active');
-          c.querySelector('.faq-title span').textContent = '+';
+    function toggleFaq(id) {
+      const ans = document.getElementById('faq-ans-' + id);
+      const icon = document.getElementById('faq-icon-' + id);
+      const btn = ans.previousElementSibling;
+      const isHidden = ans.classList.contains('hidden');
+      
+      if (isHidden) {
+        ans.classList.remove('hidden');
+        icon.innerText = '✕';
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        ans.classList.add('hidden');
+        icon.innerText = '＋';
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // Controle do Carrossel de Depoimentos
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('testimonialSlider');
+      const prevBtn = document.getElementById('prevTestimonial');
+      const nextBtn = document.getElementById('nextTestimonial');
+      const prevMobile = document.getElementById('prevMobileBtn');
+      const nextMobile = document.getElementById('nextMobileBtn');
+      const dots = document.querySelectorAll('.dot-indicator');
+
+      if (!slider) return;
+
+      const getCardWidth = () => {
+        const firstCard = slider.firstElementChild;
+        return firstCard ? firstCard.getBoundingClientRect().width + 16 : 320;
+      };
+
+      const updateDots = (activeIndex) => {
+        dots.forEach((dot, idx) => {
+          if (idx === activeIndex) {
+            dot.classList.remove('bg-sport-border', 'w-2.5', 'h-2.5');
+            dot.classList.add('bg-black', 'w-3', 'h-3');
+          } else {
+            dot.classList.remove('bg-black', 'w-3', 'h-3');
+            dot.classList.add('bg-sport-border', 'w-2.5', 'h-2.5');
+          }
         });
-        
-        if (!isActive) {
-          card.classList.add('active');
-          card.querySelector('.faq-title span').textContent = '−';
-        }
+      };
+
+      const scrollSlide = (direction) => {
+        const step = getCardWidth();
+        slider.scrollBy({ left: direction * step, behavior: 'smooth' });
+      };
+
+      if (prevBtn) prevBtn.addEventListener('click', () => scrollSlide(-1));
+      if (nextBtn) nextBtn.addEventListener('click', () => scrollSlide(1));
+      if (prevMobile) prevMobile.addEventListener('click', () => scrollSlide(-1));
+      if (nextMobile) nextMobile.addEventListener('click', () => scrollSlide(1));
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          const index = parseInt(e.target.dataset.index, 10);
+          const step = getCardWidth();
+          slider.scrollTo({ left: index * step, behavior: 'smooth' });
+          updateDots(index);
+        });
       });
     });
 
-    // Set dynamic date in promo banner
-    const dateElement = document.getElementById('promo-date');
-    if (dateElement) {
-      const options = { day: 'numeric', month: 'long' };
-      const today = new Date().toLocaleDateString('en-US', options);
-      dateElement.textContent = today;
-    }
+    // Timer de Escassez 20 min
+    (function initPromoTimer() {
+      const TIMER_DURATION_SEC = 20 * 60;
+      const STORAGE_KEY = 'futforce_promo_timer_end';
 
-    // Social Proof Purchase Notifications
-    const names = ['Chris Miller', 'Dave Wilson', 'Anthony Davis', 'Michael Smith', 'Sarah Jenkins', 'Robert Johnson', 'James Brown', 'Emily Taylor', 'William Anderson', 'Tyler Thomas', 'John Jackson', 'Jessica White', 'Matthew Harris', 'Andrew Martin', 'Daniel Thompson', 'Brandon Garcia', 'Jason Martinez', 'Ashley Robinson', 'Brian Clark', 'Kevin Rodriguez'];
-    const cities = ['Houston, TX', 'Chicago, IL', 'Los Angeles, CA', 'New York, NY', 'Miami, FL', 'Dallas, TX', 'Phoenix, AZ', 'Philadelphia, PA', 'Indianapolis, IN', 'Seattle, WA', 'Denver, CO', 'Boston, MA', 'Atlanta, GA', 'Charlotte, NC', 'Orlando, FL'];
-    const products = ['Complete Coach Plan 🏆', 'Basic Coach Plan 🏀'];
-    const emojis = ['🏀', '🔥', '✅', '⚡', '🎉'];
-    const toastContainer = document.getElementById('social-proof');
+      function getStoredEnd() {
+        try { return Number(localStorage.getItem(STORAGE_KEY)) || 0; } catch (e) { return 0; }
+      }
+      function setStoredEnd(val) {
+        try { localStorage.setItem(STORAGE_KEY, val); } catch (e) {}
+      }
 
-    function showNotification() {
-      toastContainer.innerHTML = ''; // Clear previous
+      let endTime = getStoredEnd();
+      const now = Date.now();
+      if (!endTime || endTime <= now || endTime > now + (TIMER_DURATION_SEC * 1000)) {
+        endTime = now + (TIMER_DURATION_SEC * 1000);
+        setStoredEnd(endTime);
+      }
 
-      const name = names[Math.floor(Math.random() * names.length)];
-      const city = cities[Math.floor(Math.random() * cities.length)];
-      // ~75% buy Complete Coach
-      const product = Math.random() > 0.25 ? products[0] : products[1];
-      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+      function tick() {
+        const el = document.getElementById('promoTimer');
+        if (!el) return;
+        const currentNow = Date.now();
+        let diff = Math.max(0, Math.floor((endTime - currentNow) / 1000));
+        if (diff <= 0) {
+          endTime = Date.now() + (TIMER_DURATION_SEC * 1000);
+          setStoredEnd(endTime);
+          diff = TIMER_DURATION_SEC;
+        }
+        const mins = String(Math.floor(diff / 60)).padStart(2, '0');
+        const secs = String(diff % 60).padStart(2, '0');
+        el.textContent = mins + ':' + secs;
+      }
 
-      const toast = document.createElement('div');
-      toast.className = 'social-proof-toast';
-      toast.innerHTML = `
-        <div class="toast-icon">${emoji}</div>
-        <div class="toast-content">
-          <p class="toast-title"><strong>${name}</strong> (${city})</p>
-          <p class="toast-body">Purchased the <strong>${product}</strong></p>
-          <span class="toast-time">just now</span>
-        </div>
-      `;
+      tick();
+      setInterval(tick, 1000);
+    })();
 
-      toastContainer.appendChild(toast);
-
-      // Slide in
-      setTimeout(() => {
-        toast.classList.add('show');
-      }, 100);
-
-      // Slide out and remove toast after 5 seconds
-      setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => {
-          toast.remove();
-        }, 500);
-      }, 5000);
-    }
-
-    // Run first notification after 6 seconds, then repeat with random delays
-    setTimeout(showNotification, 6000);
-    
-    function triggerNext() {
-      const delay = 18000 + Math.random() * 12000; // Between 18s and 30s
-      setTimeout(() => {
-        showNotification();
-        triggerNext();
-      }, delay);
-    }
-    triggerNext();
-
-
-
-    // Popup Modal Logic
+    // Modal Upgrade Logic
     const basicBtn = document.getElementById('btn-buy-basic');
     const modal = document.getElementById('upgradeModal');
     const closeBtn = document.getElementById('closeModalBtn');
@@ -643,46 +824,87 @@
       basicBtn.addEventListener('click', function(e) {
         e.preventDefault();
         modal.style.display = 'flex';
-        setTimeout(() => {
-          modal.classList.add('active');
-        }, 10);
+        setTimeout(() => { modal.classList.add('active'); }, 10);
       });
     }
 
     function closeModal() {
+      if (!modal) return;
       modal.classList.remove('active');
-      setTimeout(() => {
-        modal.style.display = 'none';
-      }, 300);
+      setTimeout(() => { modal.style.display = 'none'; }, 300);
     }
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeModal);
-    }
-
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (keepBasicBtn) {
       keepBasicBtn.addEventListener('click', function() {
         closeModal();
-        // Redirect directly to the Basic Plan Hotmart checkout link
-        window.location.href = "https://pay.hotmart.com/F106681760W?off=3inoklwx&checkoutMode=10";
+        window.location.href = "https://go.centerpag.com/PPU38CQFMIS";
       });
     }
-
     if (modal) {
       modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          closeModal();
-        }
+        if (e.target === modal) closeModal();
       });
+    }
+
+    // Dynamic PT-PT Date
+    const dateElement = document.getElementById('promo-date');
+    if (dateElement) {
+      const options = { day: 'numeric', month: 'long' };
+      const today = new Date().toLocaleDateString('pt-PT', options).toUpperCase();
+      dateElement.textContent = today;
     }
   </script>
 
-  <!-- Lazy load below-fold images to reduce initial payload -->
+  <!-- SCRIPT PARA PRESERVAÇÃO AUTOMÁTICA DE UTMS -->
   <script>
-    document.querySelectorAll('img:not([fetchpriority="high"])').forEach(function(img){
-      if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy');
-      if(!img.hasAttribute('decoding')) img.setAttribute('decoding','async');
-    });
+    (function() {
+      function passUtms() {
+        const search = window.location.search;
+        if (!search) return;
+        const currentParams = new URLSearchParams(search);
+
+        document.querySelectorAll('a[href]').forEach(function(link) {
+          const href = link.getAttribute('href');
+          if (!href || href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('tel:') || href.startsWith('mailto:')) {
+            return;
+          }
+
+          try {
+            const url = new URL(link.href);
+            currentParams.forEach(function(val, key) {
+              if (!url.searchParams.has(key)) {
+                url.searchParams.set(key, val);
+              }
+            });
+            link.href = url.toString();
+          } catch (e) {
+            if (link.href.indexOf('?') === -1) {
+              link.href = link.href + search;
+            } else {
+              link.href = link.href + '&' + search.substring(1);
+            }
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', passUtms);
+      } else {
+        passUtms();
+      }
+
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a[href]');
+        if (target) {
+          const href = target.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('tel:') && !href.startsWith('mailto:')) {
+            passUtms();
+          }
+        }
+      }, true);
+    })();
   </script>
+
 </body>
 </html>
